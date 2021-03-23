@@ -1,5 +1,4 @@
 FROM node:current-slim
-WORKDIR /usr/src
-
-RUN npm install
-RUN npx create-react-app my-app
+WORKDIR /app
+COPY . .
+RUN yarn install
